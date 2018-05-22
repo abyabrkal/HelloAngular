@@ -11,8 +11,6 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
-  
-  selectedHero: Hero;
 
   // the private parameter simultaneously defines a 
   // private heroService property and identifies it
@@ -23,9 +21,6 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
 
   getHeroes(): void {
     this.heroService.getHeroes()
